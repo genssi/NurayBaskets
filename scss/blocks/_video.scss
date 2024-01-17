@@ -1,0 +1,59 @@
+.video {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 180px;
+
+    @include mediaTablet {
+        padding-bottom: 90px;
+    }
+
+    // &::after {
+    //     content: "IV";
+    //     left: calc(50% + 555px);
+    //     transform: translate(-50%, 0%);
+    //     @include decorNumber;
+    // }
+}
+
+.video-link {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.2s ease-in;
+    border-radius: 5%;
+    box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.9);
+
+    &:hover {
+        filter: contrast(110%) brightness(1.2) saturate(1.2);
+    }
+}
+
+.video-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in;
+
+    @include mediaTablet {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.video-link:hover .video-icon:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    filter: saturate(1.2);
+}
+
+.video-img {
+    height: 720px;
+    width: 650px;
+    border-radius: 5%;
+
+    @include mediaTablet {
+        width: 290px;
+        height: 380px;
+    }
+}

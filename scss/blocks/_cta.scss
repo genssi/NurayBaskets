@@ -1,0 +1,54 @@
+.cta {
+    padding: 180px 0;
+    margin-top: 40px;
+    height: 640px;
+    background: linear-gradient(
+        180deg,
+        $white 5%,
+        rgba(45, 52, 60, 0.38) 51.04%,
+        $white 85.19%
+    ), url("../../img/cta-bg/paul-hanaoka-0Qar87UXlGA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @include mediaTablet {
+        padding: 60px 0;
+    }
+}
+
+.cta-title {
+    margin-bottom: 17px;
+}
+
+.cta-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cta-text {
+    line-height: 1.5;
+
+    p + p {
+        margin-top: 1em;
+    }
+
+    @include mediaTablet {
+        font-size: 14px;
+    }
+}
+
+.cta-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 30px;
+
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+    }
+}

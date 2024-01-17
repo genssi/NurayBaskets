@@ -1,0 +1,36 @@
+.feedback {
+    padding-bottom: 180px;
+    background: linear-gradient(
+        180deg,
+        $white 5%,
+        rgba(101, 128, 94, 0.38) 51.04%,
+        $white 85.19%
+    );
+
+    @include mediaTablet {
+        padding-bottom: 120px;
+    }
+}
+
+.feedback-title {
+    margin-bottom: 38px;
+
+    @include mediaTablet {
+        margin-bottom: 25px;
+    }
+}
+
+.feedback-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: center;
+
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feedback-form .form-privacy {
+    color: $dark;
+}

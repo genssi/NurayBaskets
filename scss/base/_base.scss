@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: $font-raleway, sans-serif;
+    background-color: $white;
+    font-size: 16px;
+    color: $dark;
+    background-color: $white;
+    
+}
+
+a {
+    color: $dark;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        color: $purple;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1140px;
+
+    &-sm {
+        max-width: 840px;
+    }
+}
+
+.title-2 {
+    font-size: 36px;
+    font-family: $font-roboto;
+    color: $dark;
+    font-weight: 700;
+
+    // @include mediaScreen {
+    //     font-size: 28px;
+    // }
+}
+
+.logo {
+    width: 290px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.link-bold {
+    color: $purple;
+    font-weight: 700;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.visually-hidden {
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+
+    position: absolute;
+
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+}
