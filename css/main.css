@@ -119,6 +119,13 @@ a:hover {
   font-weight: 700;
 }
 
+.title-3 {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  color: #2b2828;
+  font-weight: 400;
+}
+
 .logo {
   width: 290px;
 }
@@ -495,6 +502,99 @@ a:hover {
     left: 30px;
     bottom: 30px;
   }
+}
+
+.products {
+  margin-top: 50px;
+}
+
+.product {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+  max-width: 225px;
+  max-height: 410px;
+}
+.product:hover {
+  border: 1px solid #2b2828;
+  border-radius: 7px;
+  transition: border 0.1s ease-in;
+}
+@media screen and (max-width: 959px) {
+  .product {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.apartaments-cards-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+@media screen and (max-width: 959px) {
+  .apartaments-cards-products {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.img-product {
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px;
+}
+
+.info-product {
+  padding: 5px;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 959px) {
+  .info-product .title-3 {
+    font-size: 18px;
+  }
+}
+
+.info-price {
+  display: flex;
+  padding-left: 5px;
+  margin-top: 10px;
+  justify-content: space-between;
+  background-color: #d2d0d0;
+  border-radius: 7px;
+  align-items: center;
+}
+.info-price:hover {
+  z-index: 5;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 18px;
+}
+@media screen and (max-width: 959px) {
+  .price {
+    font-size: 16px;
+  }
+}
+
+.add-to-cart {
+  border: none;
+  border-radius: 7px;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8bc34a;
+}
+.add-to-cart:hover {
+  color: #f5ebeb;
+  width: 100px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
 }
 
 .cta {
