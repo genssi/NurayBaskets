@@ -1,0 +1,175 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+#checkout-btn {
+    background-color: #6b9e2f;
+    color: #f5ebeb;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    letter-spacing: 0.8px;
+    padding: 12px 20px;
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+        background-color: #466f17;
+    }
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: #f5ebeb;
+    padding: 15px;
+    border-radius: 4px;
+    z-index: 999;
+}
+
+#alert-message {
+    color: #6b9e2f;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 25px;
+    z-index: 9999;
+}
+
+.item-uls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 18px;
+    text-align: center;
+
+    & li {
+        border-bottom: 1px solid #ccc;
+        padding: 5px;
+    }
+}
+
+#list-name {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.modal-bottom {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 2px solid #908e8e;
+    border-radius: 20px;
+}
+
+.form-modal {
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.total-modal {
+    text-align: center;
+    color: rgb(120, 104, 19);
+    border-bottom: 1px solid #ccc;
+}
+
+.input-modal {
+    border: 1px solid #ccc;
+}
+
+.delete-from-cart {
+    background-image: url('../img/icons/delete-2-svgrepo-com.svg');
+    background-size: contain; /* Масштабируем изображение, чтобы оно полностью поместилось в кнопку */
+    background-repeat: no-repeat; /* Запрещаем повторение изображения */
+    background-position: center; /* Выравниваем изображение по центру кнопки */
+    width: 24px; /* Задаем ширину кнопки */
+    height: 24px; /* Задаем высоту кнопки */
+    border: none; /* Убираем границы кнопки */
+    cursor: pointer; /* Устанавливаем указатель мыши на кнопку */
+    padding: 0; /* Убираем отступы внутри кнопки */
+    display: block; /* Делаем кнопку блочным элементом */
+    margin: 0 auto; /* Автоматически выравниваем по центру */
+}
+
+#cartItemCount {
+    position: relative;
+    top: -10px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    background-color:red;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 1px 5px;
+    display: none;
+}
+
+/* Для экранов шириной до 959px */
+@media screen and (max-width: 959px) {
+    .modal-content {
+        width: 100%; /* Ширина занимает всю доступную область */
+    }
+
+    #list-name {
+        font-size: 20px;
+    }
+}
+
+/* Для экранов шириной до 520px */
+@media screen  and (max-width: 520px){
+    #list-name {
+        font-size: 15px;
+    }
+
+    .item-uls {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .total-modal {
+        font-size: 20px;
+    }
+}

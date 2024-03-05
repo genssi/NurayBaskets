@@ -45,7 +45,7 @@
     }
 }
 
-.header__nav {
+.header__nav{
     @include mediaTablet {
         display: none;
     }
@@ -56,5 +56,11 @@
 
     @include mediaTablet {
         display: block;
+    }
+}
+
+.logo {
+    @include mediaTablet {
+        width: 190px;
     }
 }

@@ -8,10 +8,10 @@
     display: inline-block;
     margin-bottom: 50px;
     max-width: 225px;
-    max-height: 410px;
+    max-height: 510px;
 
     &:hover {
-        border: 1px solid $dark;
+        border: 2px solid yellowgreen;
         border-radius: 7px;
         transition: border 0.1s ease-in;
     }
@@ -57,10 +57,18 @@
     background-color: #d2d0d0;
     border-radius: 7px;
     align-items: center;
-    
+
     &:hover {
         z-index: 5;
     }
+}
+
+.quantity {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .price {
@@ -70,6 +78,30 @@
     @include mediaTablet {
         font-size: 16px;
     }
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 15px;
+
+    & button {
+        background-color: #d2d0d0;
+        padding: 2px 10px;
+        border-radius: 1px;
+
+        &:hover {
+            background-color: #b5b4b4;
+            transition: background-color 0.2s linear;
+        }
+    }
+}
+
+.quantity-container input {
+    width: 75%;
+    text-align: center;
+    border: 1px solid #d2d0d0;
 }
 
 .add-to-cart {
@@ -88,4 +120,29 @@
         border-radius: 10px;
         transition: all 0.2s ease-in;
     }
+}
+
+.title-name {
+    @include mediaTablet {
+        font-size: 28px;
+    }
+}
+
+.nav-product {
+    display: block;
+
+    .nav__list {
+        @include mediaTablet {
+            column-gap: 20px;
+        }
+    }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield; /* Удаляем в Firefox */
 }

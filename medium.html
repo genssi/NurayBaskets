@@ -11,19 +11,73 @@
             <div class="header__top">
                 <div class="container">
                     <div class="header__top-row">
-                        <h3 class="title-2">Раздел medium</h3>
-                        <div class="header__nav">
+                        <h3 class="title-2 title-name">Раздел medium</h3>
+                        <div class="header__nav nav-product">
                             <nav class="nav">
                                 <ul class="nav__list">
                                     <li><a href="index.html">Главная</a></li>
-                                    <li><a href="#">Корзина</a></li>
+                                    <button class="openCart">Корзина <span id="cartItemCount">0</span></button>
                                 </ul>
                             </nav>
                         </div>
-                        <div class="header-nav-btn">
-                            <button class="nav-icon-btn">
-                                <div class="nav-icon"></div>
-                            </button>
+                        <!-- Модальное окно -->
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <ul id="list-name" class="title-3">
+                                    <li>товар</li>
+                                    <li>количество</li>
+                                    <li>сумма</li>
+                                    <li>удалить</li>
+                                </ul>
+                                <div id="cart-items">
+                                    <!-- Список товаров в корзине будет добавлен сюда -->
+                                </div>
+                                <div class="modal-bottom">
+                                    <form
+                                        id="tg"
+                                        action=""
+                                        class="feedback-form form-modal form"
+                                    >
+                                        <p
+                                            class="form-privacy form-privacy--bottom"
+                                        >
+                                            *Мы никому не передаем ваши
+                                            данные.<br />И не сохраняем ваш
+                                            номер в базу.
+                                        </p>
+                                        <input
+                                            type="text"
+                                            class="form-input input-modal"
+                                            placeholder="Ваше имя"
+                                            name="name"
+                                        />
+                                        <input
+                                            data-tel-input
+                                            type="text"
+                                            class="form-input input-modal"
+                                            placeholder="Ваш телефон"
+                                            name="phone"
+                                        />
+                                        <button id="checkout-btn" type="submit">
+                                            Оформить заказ
+                                        </button>
+                                        <p
+                                            id="total-price"
+                                            class="title-3 total-modal"
+                                            name="total-price";
+                                        >
+                                            Общая сумма: 0.00 сом
+                                        </p>
+                                        <div id="alert-message" style="display: none;">
+                                            <p>Заказ успешно оформлен. Ожидайте звонка!</p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="notification" class="notification">
+                            Товар добавлен в корзину!
                         </div>
                     </div>
                 </div>
@@ -42,9 +96,25 @@
 
                             <div class="info-product">
                                 <h3 class="title-3">Название товара</h3>
+                                <div class="quantity-container">
+                                    <button class="minus" id="minus">-</button>
+                                    <input
+                                        type="number"
+                                        id="quantity1"
+                                        class="quantity-input"
+                                        name="quantity"
+                                        value="1"
+                                        min="1"
+                                        readonly
+                                    />
+                                    <button class="plus" id="plus">+</button>
+                                </div>
                                 <div class="info-price">
                                     <span class="price">299 <small>сом</small></span>
-                                    <button class="add-to-cart">
+                                    <button 
+                                        class="add-to-cart"
+                                        data-item-name="Товар1"
+                                        data-item-price="299">
                                         <ion-icon name="cart-outline"></ion-icon>
                                     </button>
                                 </div>
@@ -57,9 +127,25 @@
 
                             <div class="info-product">
                                 <h3 class="title-3">Название товара</h3>
+                                <div class="quantity-container">
+                                    <button class="minus" id="minus">-</button>
+                                    <input
+                                        type="number"
+                                        id="quantity2"
+                                        class="quantity-input"
+                                        name="quantity"
+                                        value="1"
+                                        min="1"
+                                        readonly
+                                    />
+                                    <button class="plus" id="plus">+</button>
+                                </div>
                                 <div class="info-price">
                                     <span class="price">3399 <small>сом</small></span>
-                                    <button class="add-to-cart">
+                                    <button 
+                                        class="add-to-cart"
+                                        data-item-name="Товар2"
+                                        data-item-price="3399">
                                         <ion-icon name="cart-outline"></ion-icon>
                                     </button>
                                 </div>
@@ -72,9 +158,25 @@
 
                             <div class="info-product">
                                 <h3 class="title-3">Название товара</h3>
+                                <div class="quantity-container">
+                                    <button class="minus" id="minus">-</button>
+                                    <input
+                                        type="number"
+                                        id="quantity3"
+                                        class="quantity-input"
+                                        name="quantity"
+                                        value="1"
+                                        min="1"
+                                        readonly
+                                    />
+                                    <button class="plus" id="plus">+</button>
+                                </div>
                                 <div class="info-price">
                                     <span class="price">2929 <small>сом</small></span>
-                                    <button class="add-to-cart">
+                                    <button  
+                                        class="add-to-cart"
+                                        data-item-name="Товар3"
+                                        data-item-price="2929">
                                         <ion-icon name="cart-outline"></ion-icon>
                                     </button>
                                 </div>
@@ -87,9 +189,25 @@
 
                             <div class="info-product">
                                 <h3 class="title-3">Название товара</h3>
+                                <div class="quantity-container">
+                                    <button class="minus" id="minus">-</button>
+                                    <input
+                                        type="number"
+                                        id="quantity4"
+                                        class="quantity-input"
+                                        name="quantity"
+                                        value="1"
+                                        min="1"
+                                        readonly
+                                    />
+                                    <button class="plus" id="plus">+</button>
+                                </div>
                                 <div class="info-price">
-                                    <span class="price">299 <small>сом</small></span>
-                                    <button class="add-to-cart">
+                                    <span class="price">999 <small>сом</small></span>
+                                    <button 
+                                        class="add-to-cart"
+                                        data-item-name="Товар4"
+                                        data-item-price="999">
                                         <ion-icon name="cart-outline"></ion-icon>
                                     </button>
                                 </div>
@@ -117,7 +235,7 @@
                             <ul class="footer-nav-list">
                                 <li><a href="index.html">Главная</a></li>
                                 <li><a href="#apartaments">Каталог</a></li>
-                                <li><a href="#">Корзина</a></li>
+                                <li><button class="openCart">Корзина <span id="cartItemCount">0</span></button></li>
                                 <li><a href="#">Оплата и Доставка</a></li>
                                 <li><a href="#">Контакты</a></li>
                             </ul>
@@ -152,7 +270,7 @@
             </div>
         </footer>
 
-        
+        <!--icon-->
         <script
             type="module"
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -161,6 +279,11 @@
             nomodule
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>
-        <script src="./js/main.js"></script>
+
+        <script src="./js/libs/phoneMask/mask_list.js"></script>
+        <script src="./js/libs/phoneMask/mask.js"></script>
+        <script src="./js/cart/quantity-input.js"></script>
+        <script src="./js/cart/basket.js"></script>
+    </body>
     </body>
 </html>
