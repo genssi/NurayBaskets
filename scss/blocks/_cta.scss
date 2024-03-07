@@ -3,11 +3,12 @@
     margin-top: 40px;
     height: 640px;
     background: linear-gradient(
-        180deg,
-        $white 5%,
-        rgba(45, 52, 60, 0.38) 51.04%,
-        $white 85.19%
-    ), url("../img/cta-bg/paul-hanaoka-0Qar87UXlGA-unsplash.jpg");
+            180deg,
+            $white 5%,
+            rgba(45, 52, 60, 0.38) 51.04%,
+            $white 85.19%
+        ),
+        url("../img/cta-bg/paul-hanaoka-0Qar87UXlGA-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -51,4 +52,30 @@
     @include mediaTablet {
         grid-template-columns: 1fr;
     }
+}
+
+.form-alert {
+    color: $white;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+    background-color: #6b9e2f;
+    border-radius: 20px;
+    padding: 25px;
+    z-index: 9999;
+}
+
+.form-validate {
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    border-radius: 20px;
+    padding: 25px;
+    z-index: 99;
 }

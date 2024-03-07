@@ -170,12 +170,24 @@ document.addEventListener("DOMContentLoaded", function () {
             const CHAT_ID = "-1002050953592";
             const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
             const alertMessage = document.getElementById("alert-message");
+            const validationAlert = document.querySelector(".validation-alert");
 
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
 
                 const name = this.name.value;
                 const phone = this.phone.value;
+
+                //Валидация формы
+                if (name === undefined || name === "" || phone === undefined || phone === "") {
+                    validationAlert.style.display = "block";
+
+                    setTimeout(function () {
+                        validationAlert.style.display = "none";
+                    }, 3000);
+
+                    return;
+                }
 
                 // Получаем все элементы корзины
                 const cartItems = document.querySelectorAll(".item-uls");

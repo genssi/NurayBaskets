@@ -34,6 +34,12 @@
                                 <div class="nav-icon"></div>
                             </button>
                         </div>
+                        <div class="form-alert" style="display: none;">
+                            <p>Пожалуйста ожидайте звонка!</p>
+                        </div>
+                        <div class="form-validate" style="display: none;">
+                            <p>заполните все поля!</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -136,9 +142,9 @@
                                 Наши корзинки становятся неотъемлемой частью вашей повседневной рутины. От ярких утренних покупок до вечернего отдыха. В каждой из них – место для вашей индивидуальности, желаний и настроения. Погрузитесь в уникальный опыт покупок с NurayBaskets – где корзинки становятся не просто контейнерами, а частью вашего стиля жизни.
                             </p>
                         </div>
-                        <form id="tg" action="telegram.php" class="cta-form form">
-                            <input type="text" class="form-input" placeholder="Ваше имя">
-                            <input data-tel-input type="text" class="form-input" placeholder="Ваш телефон">
+                        <form id="tg1" action="" class="cta-form form">
+                            <input type="text" class="form-input" placeholder="Ваше имя" name="name">
+                            <input data-tel-input type="text" class="form-input" placeholder="Ваш телефон" name="phone">
                             <p class="form-privacy form-privacy--bottom">
                                 *Мы никому не передаем ваши данные.<br>И не
                                 сохраняем ваш номер в базу.
@@ -173,7 +179,7 @@
                     <div class="feedback-title">
                         <h2 class="title-2">Есть вопросы?</h2>
                     </div>
-                    <form id="tg" action="telegram.php" class="feedback-form form">
+                    <form id="tg2" action="" class="feedback-form form">
                         <p class="form-privacy form-privacy--bottom">
                             *Мы никому не передаем ваши данные.<br>И не
                             сохраняем ваш номер в базу.
@@ -265,6 +271,7 @@
         <script src="./js/libs/phoneMask/mask.js"></script>
         <script src="./js/libs/youtubeLightbox/youtubeLightbox.js"></script>
         <script src="./js/cart/basket.js"></script>
+        <script src="./js/form_tg.js"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>

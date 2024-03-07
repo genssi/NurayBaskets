@@ -73,6 +73,19 @@
   z-index: 9999;
 }
 
+.validation-alert {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  border-radius: 20px;
+  padding: 25px;
+  z-index: 99;
+}
+
 .item-uls {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
