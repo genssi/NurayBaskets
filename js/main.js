@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navIcon = document.querySelector(".nav-icon");
     const nav = document.querySelector(".header__top-row");
     const navList = document.querySelectorAll(".nav__list a");
-
+    
     //бургер меню
     function activeBtn() {
         navIcon.classList.toggle("nav-icon--active");
