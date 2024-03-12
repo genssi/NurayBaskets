@@ -6,7 +6,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const navIcon = document.querySelector(".nav-icon");
     const nav = document.querySelector(".header__top-row");
     const navList = document.querySelectorAll(".nav__list a");
-    
+    const contactsLink = document.querySelector(".nav__list li:nth-child(4) a");
+    const contactsModal = document.getElementById("contactsModal");
+
+    // Открываем модальное окно при клике на Контакты
+    contactsLink.addEventListener("click", function (event) {
+        event.preventDefault(); // Отменяем стандартное действие ссылки
+        contactsModal.style.display = "block"; // Отображаем модальное окно
+    });
+
+    // Закрываем модальное окно при клике на любое место за его пределами
+    window.addEventListener("click", function (event) {
+        if (event.target == contactsModal) {
+            contactsModal.style.display = "none"; // Скрываем модальное окно
+        }
+    });
+
     //бургер меню
     function activeBtn() {
         navIcon.classList.toggle("nav-icon--active");
