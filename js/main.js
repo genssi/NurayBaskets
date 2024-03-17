@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Закрываем модальное окно при клике пальцем на любое место за его пределами
-    window.addEventListener("mousedown", function (event) {
+    window.addEventListener("touchstart", function (event) {
         if (event.target === contactsModal) {
             contactsModal.style.display = "none"; // Скрываем модальное окно
         }
