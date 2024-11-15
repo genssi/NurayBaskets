@@ -18,11 +18,9 @@ function sendTelegramMessage(form) {
         return;
     }
 
-    // Токен вашего бота Telegram и ID чата, куда вы хотите отправлять сообщения
-    const TOKEN = "5998877765:AAE-P66pxlcCf9VBU9V3JJFsPgYEsYN3Pg8";
-    const CHAT_ID = "-1002050953592";
+    const TOKEN = "тут токен но я убрал его, по этому будет выходить ошибка";
+    const CHAT_ID = "тут чат id но я так же убрал его";
 
-    // Создаем сообщение для отправки в телеграм
     const message = `Новый заказ!\nИмя: ${name}\nТелефон: ${phone}`;
 
     // Отправляем запрос к API Telegram для отправки сообщения
